@@ -50,6 +50,21 @@ int main()
 			}
 			std::cout << std::endl << "Number of elements in subgroup: " << count << std::endl;
 		}
+		std::cout << "A straight line y=1/3x in P19" << std::endl;
+		std::vector<llint> group19;
+		for (llint j = 1ull; j < 19; j++)
+		{
+			if (ggd(19, j) == 1)
+			{
+//				std::cout << j << std::endl;
+				group19.push_back(j);
+			}
+		}
+		for (llint x = 1; x < 19; x++)
+		{
+			llint y = x * 13 % 19;
+			std::cout << "(" << x << "," << y << ")" << std::endl;
+		}
 	}
 }
 
